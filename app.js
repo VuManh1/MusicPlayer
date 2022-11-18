@@ -185,10 +185,10 @@ const app = {
         }
 
         progressBar.onchange = function() {
+            isHover = false;
             audio.currentTime = progressBar.value / 100 * audio.duration;
         }
         progressBar.oninput = () => { isHover = true; }
-        progressBar.onmouseup = () => { isHover = false; }
     },
     scrollToActiveSong: function() {
       setTimeout(() => {
